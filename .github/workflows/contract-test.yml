@@ -1,0 +1,69 @@
+# name: Run contract tests
+
+# on:
+#   pull_request:
+#     types: [opened, synchronize, reopened, edited]
+#   push:
+#     branches:
+#       - main
+
+# # if this branch is pushed back to back, cancel the older branch's workflow
+# concurrency:
+#   group: ${{ github.ref }} && ${{ github.workflow }}
+#   cancel-in-progress: true
+
+# env:
+#   PACT_BROKER_BASE_URL: ${{ secrets.PACT_BROKER_BASE_URL }}
+#   PACT_BROKER_TOKEN: ${{ secrets.PACT_BROKER_TOKEN }}
+#   GITHUB_SHA: ${{ github.sha }}
+#   GITHUB_BRANCH: ${{ github.head_ref }}
+
+# jobs:
+#   contract-test:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#         with:
+#           ref: ${{ github.head_ref }} # Ensure you're on the correct branch
+
+#       - name: Read Node version from .nvmrc
+#         id: node_version
+#         run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
+
+#       - uses: actions/setup-node@v4
+#         with:
+#           node-version: ${{ env.NODE_VERSION }}
+
+#       - name: Set PACT_BREAKING_CHANGE based on PR description checkbox
+#         if: ${{ github.event_name == 'pull_request' }}
+#         uses: actions/github-script@v7
+#         with:
+#           script: |
+#             const prBody = context.payload.pull_request.body || '';
+#             if (prBody.includes('[x] Pact breaking change')) {
+#               core.exportVariable('PACT_BREAKING_CHANGE', 'true');
+#               console.log('PACT_BREAKING_CHANGE set to true based on PR description checkbox.');
+#             } else {
+#               core.exportVariable('PACT_BREAKING_CHANGE', 'false');
+#               console.log('PACT_BREAKING_CHANGE remains false.');
+#             }
+
+#       - name: Install dependencies
+#         run: npm ci
+
+#       - name: Run consumer contract tests
+#         run: npm run test:consumer
+
+#       - name: Publish contract to Pactflow
+#         run: npm run publish:pact
+
+#       # a web hook is triggered on the provider
+#       # which executes the provider tests
+
+#       - name: Can I deploy consumer?
+#         if: env.PACT_BREAKING_CHANGE != 'true'
+#         run: npm run can:i:deploy:consumer
+
+#       - name: Record web consumer deployment
+#         if: github.ref == 'refs/heads/main'
+#         run: npm run record:consumer:deployment --env=dev

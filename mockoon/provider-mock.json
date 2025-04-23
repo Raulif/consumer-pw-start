@@ -1,0 +1,686 @@
+{
+  "uuid": "ce4627f5-af2f-4fe2-bd35-b002a5f6c5cf",
+  "lastMigration": 32,
+  "name": "provider-mock",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "3bf1bd55-fa2f-4eb2-b6c4-f6af12ac09bf",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "__messages__",
+      "responses": [
+        {
+          "uuid": "25265902-fd29-4e71-ac57-ba3641a0d317",
+          "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /__messages__</pre>\n</body>\n</html>\n",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-headers",
+              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+            },
+            {
+              "key": "access-control-allow-methods",
+              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-security-policy",
+              "value": "default-src 'none'"
+            },
+            {
+              "key": "content-type",
+              "value": "text/html; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 04 Oct 2024 17:37:28 GMT"
+            },
+            {
+              "key": "vary",
+              "value": "Origin"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-length",
+              "value": "152"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "fa355163-e030-45a3-b8b9-08b74ec57542",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "2d835358-af76-44d6-9ddd-31cf75ccbce1",
+          "body": "{\n  \"message\": \"Server is running\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-headers",
+              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+            },
+            {
+              "key": "access-control-allow-methods",
+              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 04 Oct 2024 17:37:28 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"1f-wj0DLAYn9zOzb8xGWeBYucEznE4\""
+            },
+            {
+              "key": "vary",
+              "value": "Origin"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-length",
+              "value": "36"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "0621d9eb-bf89-4592-bc54-6f1ab923d887",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "__messages__",
+      "responses": [
+        {
+          "uuid": "9cf06f7b-b219-47dc-a87f-93d8aa102c62",
+          "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /__messages__</pre>\n</body>\n</html>\n",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-headers",
+              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+            },
+            {
+              "key": "access-control-allow-methods",
+              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-security-policy",
+              "value": "default-src 'none'"
+            },
+            {
+              "key": "content-type",
+              "value": "text/html; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 04 Oct 2024 17:37:28 GMT"
+            },
+            {
+              "key": "vary",
+              "value": "Origin"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-length",
+              "value": "151"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "a0e6a39c-deab-457d-9cb0-a173af559357",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "movies",
+      "responses": [
+        {
+          "uuid": "8f45c9fb-3743-4adb-b931-b2c235d31741",
+          "body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"tabella cupressus demitto\",\n    \"year\": 1985,\n    \"rating\": 7.5,\n    \"director\": \"Christopher Nolan\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-headers",
+              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+            },
+            {
+              "key": "access-control-allow-methods",
+              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 04 Oct 2024 17:37:28 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"4d-wMO8rvSG4zdycT2DGCjEHn4tXrQ\""
+            },
+            {
+              "key": "vary",
+              "value": "Origin"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-length",
+              "value": "107"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "edbdc41d-029e-4c9c-ae14-354338403ef6",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "movies",
+      "responses": [
+        {
+          "uuid": "196a42a6-b7e2-435a-92c8-782e24378cc4",
+          "body": "{\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"tabella cupressus demitto\",\n      \"year\": 1985,\n      \"rating\": 7.5,\n      \"director\": \"Christopher Nolan\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-headers",
+              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+            },
+            {
+              "key": "access-control-allow-methods",
+              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 04 Oct 2024 17:37:29 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"4f-SBXhLaYTuG0IWhhviMFJMjt96UA\""
+            },
+            {
+              "key": "vary",
+              "value": "Origin"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-length",
+              "value": "125"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "d6450ac6-48fa-44fa-82a9-3c025e7d0e1d",
+          "body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"tabella cupressus demitto\",\n    \"year\": 1985,\n    \"rating\": 7.5,\n    \"director\": \"Christopher Nolan\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "name",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "5090fa72-0659-4c80-a126-2a80721de29d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "movies/1",
+      "responses": [
+        {
+          "uuid": "5fc77854-99d5-4a98-adc1-85b79c39a733",
+          "body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"tabella cupressus demitto\",\n    \"year\": 1985,\n    \"rating\": 7.5,\n    \"director\": \"Christopher Nolan\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-headers",
+              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+            },
+            {
+              "key": "access-control-allow-methods",
+              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 04 Oct 2024 17:37:29 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"4d-wMO8rvSG4zdycT2DGCjEHn4tXrQ\""
+            },
+            {
+              "key": "vary",
+              "value": "Origin"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-length",
+              "value": "107"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "88d17646-030c-4008-9025-c95d719b7be8",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "movies/1",
+      "responses": [
+        {
+          "uuid": "8b67473d-1f31-4adb-a859-dde086757767",
+          "body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Updated Name\",\n    \"year\": 2000,\n    \"rating\": 7.5,\n    \"director\": \"Christopher Nolan\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-headers",
+              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+            },
+            {
+              "key": "access-control-allow-methods",
+              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 04 Oct 2024 17:37:29 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"40-5NiXOKqCdtC/yP+lpVxnV6TA31s\""
+            },
+            {
+              "key": "vary",
+              "value": "Origin"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-length",
+              "value": "94"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "d0745036-f2a3-454f-964e-954844f2b142",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "movies/1",
+      "responses": [
+        {
+          "uuid": "812dc8f1-632b-49b9-8200-d4028c156bd4",
+          "body": "{\n  \"status\": 200,\n  \"message\": \"Movie 1 has been deleted\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-headers",
+              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+            },
+            {
+              "key": "access-control-allow-methods",
+              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 04 Oct 2024 17:37:29 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"33-eNU6TdGHHsflo/gTHPlveah4YyQ\""
+            },
+            {
+              "key": "vary",
+              "value": "Origin"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-length",
+              "value": "60"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "3bf1bd55-fa2f-4eb2-b6c4-f6af12ac09bf"
+    },
+    {
+      "type": "route",
+      "uuid": "fa355163-e030-45a3-b8b9-08b74ec57542"
+    },
+    {
+      "type": "route",
+      "uuid": "0621d9eb-bf89-4592-bc54-6f1ab923d887"
+    },
+    {
+      "type": "route",
+      "uuid": "a0e6a39c-deab-457d-9cb0-a173af559357"
+    },
+    {
+      "type": "route",
+      "uuid": "edbdc41d-029e-4c9c-ae14-354338403ef6"
+    },
+    {
+      "type": "route",
+      "uuid": "5090fa72-0659-4c80-a126-2a80721de29d"
+    },
+    {
+      "type": "route",
+      "uuid": "88d17646-030c-4008-9025-c95d719b7be8"
+    },
+    {
+      "type": "route",
+      "uuid": "d0745036-f2a3-454f-964e-954844f2b142"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "http://localhost:3002",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
