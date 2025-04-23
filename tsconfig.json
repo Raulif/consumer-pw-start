@@ -5,7 +5,8 @@
     "./jest-pact.config.ts",
     "./.eslintrc.js",
     "cypress",
-    "cypress/index.ts"
+    "cypress/index.ts",
+    "pw"
   ],
   "exclude": ["node_modules", "coverage", "dist", "**/*.*test.ts*"],
   "compilerOptions": {
