@@ -5,31 +5,20 @@ import type { MovieEvent, MovieAction } from '../../src/events/movie-event-types
 import { logFilePath } from '../../src/events/log-file-path'
 
 /**
- * Reshapes the Kafka event entry into a simplified format for easier processing.
- *
- * @param {MovieEvent} entry - The Kafka event entry containing topic and message details.
- * @returns {{topic: string, key: string, movie: Movie}} - Returns a simplified object with the topic, key, and movie details.
- */
-const reshape = (entry: MovieEvent) => ({
-  topic: entry.topic,
-  key: entry.messages[0]?.key,
-  movie: JSON.parse(entry.messages[0]?.value as unknown as string)
-})
-
-/**
  * Curried filter function to filter by topic and movieId
  *
  * @param {number} movieId - The ID of the movie to filter by.
  * @param {string} topic - The Kafka topic to filter by.
- * @returns {(entries: Array<ReturnType<typeof reshape>>) => Array} - A function that filters entries based on the topic and movieId.
+ * @param {Array<MovieEvent>} entries
+ * @returns {Array<MovieEvent>} - A function that filters entries based on the topic and movieId.
  */
 const filterByTopicAndId = (
   movieId: number,
-  topic: string,
-  entries: ReturnType<typeof reshape>[]
+  topic: `movie-${MovieAction}`,
+  entries: MovieEvent[]
 ) =>
   entries.filter(
-    (entry) => entry.topic === topic && entry.movie?.id === movieId
+    (entry: MovieEvent) => entry.topic === topic && entry.id === movieId
   )
 
 /**
@@ -38,7 +27,7 @@ const filterByTopicAndId = (
  * @param {number} movieId - The ID of the movie to filter for.
  * @param {`movie-${MovieAction}`} topic - The Kafka topic to filter by.
  * @param {string} [filePath=logFilePath] - Optional file path for the Kafka event log file.
- * @returns {Promise<Array>} - A promise that resolves the matching events
+ * @returns {Promise<MovieEvent[]>} - A promise that resolves the matching events
  */
 export const parseKafkaEvent = async (
   movieId: number,
@@ -51,8 +40,7 @@ export const parseKafkaEvent = async (
     const entries = fileContent
       .trim()
       .split('\n')
-      .map((line) => JSON.parse(line))
-      .map(reshape)
+      .map((line) => JSON.parse(line) as MovieEvent)
 
     // Fitler the entries by topic and movieId
     return filterByTopicAndId(movieId, topic, entries)

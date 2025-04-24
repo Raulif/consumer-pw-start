@@ -4,9 +4,10 @@
 export type MovieAction = 'created' | 'updated' | 'deleted'
 type Event<T extends string> = {
   topic: `movie-${T}`
-  messages: Array<{
-    key: string // id as string
-    value: string // serialized movie object
-  }>
+  director: string
+  year: number
+  id: number
+  name: string
+  rating: number
 }
 export type MovieEvent = Event<MovieAction>

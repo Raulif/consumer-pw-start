@@ -28,7 +28,7 @@ export async function recurseWithExpect(
     try {
       await fn()
       return // All assertions passed
-    } catch (error: unknown) {
+    } catch (error: unknown) { // function fn() threw an error
       if (error instanceof Error) {
         console.warn(
           `Attempt ${attempt + 1} failed: ${error.message}. Retrying in ${interval}ms...`
